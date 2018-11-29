@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from accounts import urls as accounts_urls
 from django.urls import path, include
 from accounts.views import get_index
 from accounts.views import register_artist, register_lover
@@ -26,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_index, name='get_index'),
     path('', include(blog_urls)),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
     path('register/artist', register_artist, name="register_artist"),
     path('register/lover', register_lover, name="register_lover"),
