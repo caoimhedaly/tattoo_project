@@ -14,8 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from accounts.views import get_index
+from accounts.views import register_artist, register_lover
+from blog import urls as blog_urls
+from django.views.static import serve
+from django.conf import settings
+from ecommerce.views import product_detail, product_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', get_index, name='get_index'),
+    path('', include(blog_urls)),
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('register/artist', register_artist, name="register_artist"),
+    path('register/lover', register_lover, name="register_lover"),
+    path('ecommerce/product_list', product_list, name = 'product_list'),
+    path('ecommerce/<int:id>/product_detail', product_detail, name = 'product_detail'),
 ]
