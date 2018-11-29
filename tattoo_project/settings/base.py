@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tattoo-project-keve87.c9users.io' ]
+ALLOWED_HOSTS = ['tattoo-project-keve87.c9users.io', 'keves-tattoo-project.herokuapp.com' ]
 
 
 # Application definition
