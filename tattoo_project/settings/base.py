@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'blog',
     'storages',
     'ecommerce',
+    'cart',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.items_in_cart',
             ],
         },
     },
@@ -81,7 +84,9 @@ WSGI_APPLICATION = 'tattoo_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
- 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3"))
+} 
 
 
 # Password validation
@@ -129,4 +134,7 @@ LOGOUT_REDIRECT_URL = '/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STRIPE_PUBLISHABLE_KEY= os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY=os.environ.get("STRIPE_SECRET_KEY")
  

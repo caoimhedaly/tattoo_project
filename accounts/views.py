@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import  LoverForm, ArtistForm, SignUpForm
+from .forms import  AddictForm, ArtistForm, SignUpForm
 from django.contrib import auth
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
@@ -49,9 +49,9 @@ def register_lover(request):
     
     if request.method == "POST":
         user_form = SignUpForm(request.POST)
-        lover_form = LoverForm(request.POST, request.FILES)
+        addict_form = AddictForm(request.POST, request.FILES)
         
-        if user_form.is_valid() and lover_form.is_valid():
+        if user_form.is_valid() and addict_form.is_valid():
             user = user_form.save()
             addict = addict_form.save(commit=False)
             addict.user = user
@@ -68,7 +68,7 @@ def register_lover(request):
                 user_form.add_error(None, "Can't log in now, try later.")
     else:
         user_form = SignUpForm()
-        lover_form =LoverForm()
+        addict_form =AddictForm()
 
-    return render(request, "registration/signup.html", {'user_form': user_form, 'profile_form':lover_form})
+    return render(request, "registration/signup.html", {'user_form': user_form, 'profile_form':addict_form})
 

@@ -14,7 +14,7 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
         
         
-class LoverForm(forms.ModelForm):
+class AddictForm(forms.ModelForm):
     class Meta:
         model=Lover
         fields = ('image',)

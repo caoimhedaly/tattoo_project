@@ -21,7 +21,9 @@ from accounts.views import register_artist, register_lover
 from blog import urls as blog_urls
 from django.views.static import serve
 from django.conf import settings
-from ecommerce.views import product_detail, product_list
+from ecommerce.views import product_detail, product_list, add_product, edit_product
+from cart.views import add_to_cart, view_cart, remove_from_cart
+from checkout.views import show_checkout, submit_payment
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +35,11 @@ urlpatterns = [
     path('register/lover', register_lover, name="register_lover"),
     path('ecommerce/product_list', product_list, name = 'product_list'),
     path('ecommerce/<int:id>/product_detail', product_detail, name = 'product_detail'),
+    path('cart/add', add_to_cart, name = 'add_to_cart'),
+    path('cart/view', view_cart, name= 'view_cart'),
+    path('cart/remove', remove_from_cart, name = 'remove_from_cart'),
+    path('checkout/show_checkout/', show_checkout, name = 'show_checkout'),
+    path('payment/', submit_payment, name = 'submit_payment'),
+    path('products/<int:id>/edit', edit_product, name='edit_product'),
+    path('products/add', add_product, name='add_product'),
 ]
