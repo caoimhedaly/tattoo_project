@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,  get_object_or_404
 from .forms import  AddictForm, ArtistForm, SignUpForm
 from django.contrib import auth
 from django.contrib.auth import authenticate
@@ -7,13 +7,11 @@ from django.contrib.auth.decorators import login_required
 
 def get_index(request):
     return render(request, 'index.html')
-
-
-
-
-# @login_required(login_url='/accounts/login')    
-# def profile(request):
-#     return render(request, "accounts/profile.html")
+    
+def read_profile(request):
+    return render(request, 'profile2.html')
+    
+    
 
 
     
@@ -71,4 +69,5 @@ def register_lover(request):
         addict_form =AddictForm()
 
     return render(request, "registration/signup.html", {'user_form': user_form, 'profile_form':addict_form})
+    
 

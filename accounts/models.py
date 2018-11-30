@@ -11,6 +11,8 @@ class Artist(models.Model):
     image= models.ImageField(upload_to='avatars',default = 'avatars/anonymous.png', null=True, blank=True)
     user= models.OneToOneField(User, on_delete=models.CASCADE, related_name="artist")
     salon= models.CharField(max_length=100, null=True, blank=True)
+    country=models.CharField(max_length=100, null=True, blank=True)
+    city=models.CharField(max_length=100, null=True, blank=True)
     # experience=models.DecimalField(max_digits=6, decimal_places=2)
     Bio = models.TextField(max_length=1000, null=True, blank=True)
     

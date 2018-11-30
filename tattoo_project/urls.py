@@ -17,7 +17,7 @@ from django.contrib import admin
 
 from django.urls import path, include
 from accounts.views import get_index
-from accounts.views import register_artist, register_lover
+from accounts.views import register_artist, register_lover, read_profile
 from blog import urls as blog_urls
 from django.views.static import serve
 from django.conf import settings
@@ -31,6 +31,7 @@ urlpatterns = [
     path('', include(blog_urls)),
     path('accounts/', include('django.contrib.auth.urls')),
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('accounts/profile/', read_profile, name='read_profile'),
     path('register/artist', register_artist, name="register_artist"),
     path('register/lover', register_lover, name="register_lover"),
     path('ecommerce/product_list', product_list, name = 'product_list'),

@@ -10,7 +10,12 @@
     <div class="row">
         <div class="col-md-2 col-sm-3 text-center">
             <a class="story-img" href="#">
+                {% if request.user.artist %}
                 <img src="{{MEDIA_URL}}{{post.author.artist.image}}" class="img-circle" class="img-circle">
+                {% else %}
+                <img src="{{MEDIA_URL}}{{post.author.lover.image}}" class="img-circle" class="img-circle">
+                {% endif %}
+                
             </a>
             <p><span class="boldtext">Author:</span> {{ post.author.username }}</p>
         </div>
@@ -18,7 +23,7 @@
             <h3>{{ post.title }}</h3>
             
             {% if post.image %}
-            <img src="{{MEDIA_URL}}{{post.image}}"></img>
+            <img src="{{MEDIA_URL}}{{post.image}}" class = 'img-blogpost' ></img>
             {% endif %}
             
             <div class="row">
