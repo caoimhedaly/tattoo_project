@@ -4,13 +4,13 @@
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
         <a class="story-img" href="#">
-                    {% if post.user.lover %}
-                    <img src="{{MEDIA_URL}}{{post.author.user.lover.image}}" class="img-circle">
+                    {% if post.author.lover %}
+                    <img src="{{MEDIA_URL}}{{post.author.lover.image}}" class="img-circle">
                     {% endif %}
                     </a>
          <a class="story-img" href="#">            
-                    {% if post.user.artist %}
-                    <img src="{{MEDIA_URL}}{{post.author.user.artist.image}}" class="img-circle">
+                    {% if post.author.artist %}
+                    <img src="{{MEDIA_URL}}{{post.author.artist.image}}" class="img-circle">
                     {% endif %}
                 </a>
         <p><span class="boldtext">Author:</span> {{ post.author.username }}</p>
