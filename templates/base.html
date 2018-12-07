@@ -8,7 +8,9 @@
     <title>Tattoo Project</title>
 
     {% block head_style %}
+  
     <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
@@ -41,12 +43,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'read_profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                        <li><a href="{% url 'get_all_posts' %}"> Tattoos</a></li>
+                        <li><a href="{% url 'view_test' %}"> Tattoos</a></li>
                         <li><a href="{% url 'product_list' %}"> Prints</a></li>
                         <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
                         <li><a href="{% url 'add_post' %}"><i class="fa fa-plus"></i> Share your Art</a></li>
+                        <li><a href="{% url 'get_all_posts' %}"> Blog</a></li>
                     {%  else %}
-                       
+                        
                         <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
                     {% endif %}
                     <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart 

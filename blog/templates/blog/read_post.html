@@ -12,9 +12,12 @@
             <a class="story-img" href="#">
                 {% if post.author.artist %}
                 <img src="{{MEDIA_URL}}{{post.author.artist.image}}" class="img-circle" class="img-circle">
-                {% else %}
+              
+                {% elif post.author.lover %}
                 <img src="{{MEDIA_URL}}{{post.author.lover.image}}" class="img-circle" class="img-circle">
-                {% endif %}
+                 {% else %}
+                <img src="{% static 'media/admin.jpeg' %}" class="img-circle" class="img-circle">
+                 {% endif %}
                 
             </a>
             <p><span class="boldtext">Author:</span> {{ post.author.username }}</p>
@@ -25,6 +28,8 @@
             {% if post.image %}
             <img src="{{MEDIA_URL}}{{post.image}}" class = 'img-blogpost' ></img>
             {% endif %}
+            <div class = 'row'>&nbsp</div>
+            <p class = 'post_content'>{{ post.content}}</p>
             
             <div class="row">
                 <div class="col-xs-9">

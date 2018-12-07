@@ -5,6 +5,7 @@
 body {
     font-family: Arial;
     padding-top: 50px;
+    background-color: #152836
 }
 
 footer {
@@ -14,8 +15,26 @@ footer {
     background-color: #ededed;
 }
 
-h1, h1 a {
-    color: #555555;
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border-color:#152836;
+}
+
+.navbar-default{
+   background-color: #152836; 
+   border-color:#152836;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color:white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 15px;
+}
+
+
+h3, h1, h1 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -131,9 +150,14 @@ a, a:hover {
     height: 300px; 
 }
 
+/*______________________blog_____________________________*/
 .img-blogpost{
     height: 300px;
     width: auto;
 }
 
+.post_content{
+    font-size: 20px;
+}
 
+/*test*/

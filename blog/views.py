@@ -72,7 +72,7 @@ def edit_post(request, id):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES, instance=post)
         form.save()
-        return redirect("/")
+        return redirect(read_post, post.id)
     else:        
         form=PostForm(instance=post)
         return render(request, "blog/form.html", {'form': form })
@@ -90,6 +90,10 @@ def publish_post(request, id):
     post.save()
     return redirect(read_post, post.id)
      
+def view_test(request):
 
+    
+    posts = Post.objects.filter(published_date__lte = timezone.now())
+    return render( request, "blog/test-posts.html", {'posts': posts})
 
   
