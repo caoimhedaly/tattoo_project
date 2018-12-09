@@ -3,24 +3,20 @@
 
 
 <div class = 'container'>
-    <div class = 'row'>
-        <header class = 'col s12'>
-            <h1>The Tattoo Project</h1>
-        </header>
-    </div>
+ 
     <div class = 'row'>
         <div class = 'col s12'>
             
-            <h3><i class="fa fa-user-plus">Sign up for a free account</i></h3>
+            <h3 class = 'signup'><i class="fa fa-user-plus">Sign up for a free account</i></h3>
              </div>
               </div>
                  <div class = 'row'>
-        <div class = 'col-s6'>
-           <button type="button" class="btn btn-warning">
+        <div class = 'col-sm-6 '>
+            <button type="button" class="btn btn-light">
            <a href="{% url 'register_artist' %}">I'm an Artist </a></button>
           </div> 
-          <div class = 'col-s6'>
-           <button type="button" class="btn btn-info">
+          <div class = 'col-sm-6'>
+           <button type="button" class="btn btn-light">
                <a href="{% url 'register_lover' %}">I'm an Addict</a></button>
        </div>
    

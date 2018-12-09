@@ -1,7 +1,14 @@
 
 body{
-  background-color: #152836
+  background-color: #152836;
+  color:white;
 }
+
+.white {
+  color:white;
+}
+
+
 h2{color:#fff;margin-bottom:40px;text-align:center;font-weight:100;}
 
 .demo-gallery > post {

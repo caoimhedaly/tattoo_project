@@ -2,10 +2,17 @@
     width: auto;
 }
 
+h1{
+    text-shadow: 2px 2px red;
+    letter-spacing: 3px;
+}
+
 body {
-    font-family: Arial;
+    
+   font-family: 'Nanum Gothic', sans-serif;
     padding-top: 50px;
-    background-color: #152836
+    background-color: #152836;
+    color:white;
 }
 
 footer {
@@ -15,13 +22,30 @@ footer {
     background-color: #ededed;
 }
 
+header{
+    text-align: center;
+}
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
     border-color:#152836;
+    text-align: center;
 }
 
 .navbar-default{
    background-color: #152836; 
    border-color:#152836;
+}
+
+.nav>li {
+    display:inline-block;
+    float: none;
+    
+}
+
+.nav{
+    text-align: center;
+      display: inline-block;
+  float: none;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -69,9 +93,12 @@ h3, h1, h1 a {
 }
 
 .story-img {
-    margin-top: 25%;
+    
     display: block;
+    
 }
+
+
 
 a, a:hover {
     color: #223344;
@@ -143,6 +170,7 @@ a, a:hover {
 .img-circle{
     width:100px;
     height: 100px; 
+    padding-top: 0px;
 }
 
 .profile-page{
@@ -152,12 +180,17 @@ a, a:hover {
 
 /*______________________blog_____________________________*/
 .img-blogpost{
-    height: 300px;
+    height:350px;
     width: auto;
+  
 }
 
 .post_content{
     font-size: 20px;
 }
+/*home page*/
 
-/*test*/
+.signup, .col-sm-6{
+    text-align: center;
+    
+}
