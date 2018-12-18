@@ -15,8 +15,11 @@
                     <div class="col-md-12">
                         <div class="bio-image">
                             {% if request.user.artist %}
-                            <img class='img-circle profile-page'  src="{{ MEDIA_URL}}{{ request.user.artist.image }}" /> {% else %}
-                            <img class='img-circle profile-page' src="{{ MEDIA_URL}}{{ request.user.lover.image }}" /> {% endif %}
+                            <img class='img-circle profile-page'  src="{{ MEDIA_URL}}{{ request.user.artist.image }}" /> 
+                            {% elif request.user.lover %}
+                            <img class='img-circle profile-page' src="{{ MEDIA_URL}}{{ request.user.lover.image }}" /> 
+                           
+                            {% endif %}
                         </div>
                     </div>
                 </div>

@@ -6,5 +6,9 @@ class PostForm(forms.ModelForm):
     class Meta:
         model=Post
         exclude = ['author', 'views']
+        
+        widgets = {
+            'tags': forms.TextInput(attrs={'data-role': 'tagsinput'}),
+        }
     # exclude whichever elements you dont want to display on your form
         

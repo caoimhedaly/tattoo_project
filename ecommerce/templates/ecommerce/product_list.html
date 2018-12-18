@@ -29,7 +29,9 @@
     
     <div = 'row'>
         <div = 'col s12'>
-            <li><a href="{% url 'add_product' %}"><i class="fa fa-plus"></i> Sell your Prints </a></li>
+             {% if request.user.artist %}
+            <li><a href="{% url 'add_product' %}"></i> Sell your Prints </a></li>
+            {% endif %}
         </div>
     </div>
     </div>

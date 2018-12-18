@@ -11,9 +11,12 @@
   
     <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 
 
@@ -23,10 +26,29 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     
     {% endblock head_js %}
 </head>
 <body>
+    <div class = 'row'>
+        <div class = 'col-xs-11 col-md-11'></div>
+        <div id = 'cart' class = 'col-xs-1 col-md-1'>
+             <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart fa-2x"></i>
+    </div>
+    
     <header class = 'row'>
         <div class = 'col-sm-12 text-align-center'>
             <h1>The Tattoo Project</h1>
@@ -60,7 +82,7 @@
                         <li><a href="{% url 'add_post' %}"><i class="fa fa-plus"></i> Share your Art</a></li>
                    
               
-                        <li><a href="{% url 'get_all_posts' %}"> Blog</a></li>
+                     
                         
                          <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
                   
@@ -71,10 +93,10 @@
                         <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
                     {% endif %}
                     
-                    <li><a href="#"> Artists</a></li>
+                    <li><a href="{% url 'get_all_artists' %}"> Artists</a></li> 
                     <li><a href="{% url 'product_list' %}"> Prints</a></li>
                     <li><a href="{% url 'view_test' %}"> Tattoos</a></li>
-                    <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart 
+                    
                     {% if items_in_cart > 0 %}
                         <label class="badge badge-light">{{items_in_cart}}</label>
                         {% endif %}
@@ -92,10 +114,20 @@
         {% block content %} {% endblock %}
         </div>
     </div>
-    <!--<footer>-->
-    <!--    <div class="container">-->
-    <!--        <p>Made by Code Institute bootcampers</p>-->
-    <!--    </div>-->
-    <!--</footer>-->
+    <footer>
+        <div class="container">
+            <div class = 'row'>
+                <div class = 'col-xs-4 col-md-4'>
+    <div class="fb-like" data-href="http://tattoo-project-keve87.c9users.io:8080/" data-width="20px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+        </div>
+        <div class = 'col-xs-4 col-md-4'>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class = 'col-xs-4 col-md-4'>
+            <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"></a>
+        </div>
+         </div>
+         </div>
+    </footer>
 </body>
 </html>

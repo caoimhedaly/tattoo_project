@@ -24,6 +24,9 @@ from django.conf import settings
 from ecommerce.views import product_detail, product_list, add_product, edit_product
 from cart.views import add_to_cart, view_cart, remove_from_cart
 from checkout.views import show_checkout, submit_payment
+from reviews.views import make_review
+from blog.views import make_comment
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,4 +46,6 @@ urlpatterns = [
     path('payment/', submit_payment, name = 'submit_payment'),
     path('products/<int:id>/edit', edit_product, name='edit_product'),
     path('products/add', add_product, name='add_product'),
+    path('review/<int:id>/form', make_review, name= 'make_review'),
+    path('comment/<int:id>/form', make_comment, name= 'make_comment'),
 ]

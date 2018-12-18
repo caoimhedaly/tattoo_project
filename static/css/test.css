@@ -48,3 +48,44 @@ h2{color:#fff;margin-bottom:40px;text-align:center;font-weight:100;}
   padding-bottom: 80px; 
 }
 
+.img-blogpost{
+    height:350px;
+    width: auto;
+  
+}
+
+.img-circle{
+    width:100px;
+    height: 100px; 
+    padding-top: 0px;
+    border-radius: 50%;
+}
+
+.far{
+  size: x2;
+}
+
+.comment-img{
+  width:30px;
+  height: 30px;
+  border-radius:50%;
+  
+}
+
+hr{
+  background-color:  #D4AF37;
+  color: #D4AF37;
+  height: 7px;
+  border: none;
+  width:100%;
+}
+
+.img-blogpost{
+
+    
+    padding: 20px;
+    border: 10px solid #D4AF37;
+    color: #D4AF37;
+
+}
+

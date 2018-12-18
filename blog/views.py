@@ -4,8 +4,14 @@ from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib.auth.decorators import permission_required
+from accounts.models import Artist
+from reviews.forms import ReviewForm, CommentForm
 
 # Create your views here.
+
+def get_posts_by_tag(request, tag):
+    posts = Post.objects.filter(tags__icontains=tag)
+    return render(request, "blog/test-posts.html", {'posts': posts})
 
 
 def is_in_group(user, group_name):
@@ -95,5 +101,41 @@ def view_test(request):
     
     posts = Post.objects.filter(published_date__lte = timezone.now())
     return render( request, "blog/test-posts.html", {'posts': posts})
+    
+def get_all_artists(request):
+    
+    artists = Artist.objects.all()
+    return render( request, "blog/all_artists.html", {'artists': artists})
 
+def make_comment(request, id):
+    post = get_object_or_404(Post, pk=id)
+   
+    
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        comment=form.save(commit=False)
+        # dont save to database
+        comment.author = request.user
+        comment.post_id=id
+        # author= logged in user
+        comment.save()
+        # finally save to database
+        return redirect(read_post, id=id)
+     
+    else:
+     
+        form = CommentForm()
+        return render(request, 'reviews/form.html', {'form':form})
+        
+def like_post(request, id):
+    post = get_object_or_404(POst, pk=id)
+    
+    post.likes += 1
+    post.save()
+      
+    return render(request, "blog/read_post.html", {'post': post})
+    
+    
+    
   
+

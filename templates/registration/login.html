@@ -3,9 +3,11 @@
 
 {% block content %}
 <h2>Login</h2>
+
 <form method="post">
   {% csrf_token %}
   {{ form | as_bootstrap }}
+ 
   
   <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
 

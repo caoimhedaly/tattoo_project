@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+
 <div class='row'>
     <div class="col-sm-6 ">
         <div class="thumbnail">
@@ -11,7 +12,7 @@
                 <h3>{{product.name}}
                 </h3>
                 <h4>Price: €{{product.price}}</h4>
-                <p>Brand: {{product.artist}}</p>
+                <p>Artist: {{product.artist}}</p>
 
                 <p>{{product.description | linebreaksbr }}</p>
                 <p><span class="boldtext">Stock:</span> {{ product.stock}} </p>
@@ -23,11 +24,12 @@
                                     <input class="btn btn-primary" type="submit" value="Add to cart"/>
                                 </form>
                                 
-                <a href="" class="btn btn-primary" value="Add Review">Add Review</a>
+                <a href="{% url 'make_review' product.id %}" class="btn btn-primary" value="Add Review">Add Review</a>
                 
                  {% if can_edit %}
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-primary" value="Add Review">Edit Print</a>
                 {% endif %}
+                <hr>
                 
                 
                 
@@ -55,11 +57,12 @@
                         <!--gives first few words of post-->
                         
                         <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
+                        <p>{{review.author}}</p>
                     
                     </div>
                 </div>
             </div>
-            <hr>
+            
         
     </div>
 
