@@ -1,14 +1,14 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load static from staticfiles %}
+<div class='container'>
+    <div class='row'>
+        <div id='print' class="col-sm-12 col-md-6 ">
 
-<div class='row'>
-    <div class="col-sm-6 ">
-        <div class="thumbnail">
-            <img width="150" height="75"src="{{MEDIA_URL}}{{product.image}}" alt="">
-
+            <img class='print' width="300px" height="300px" src="{{MEDIA_URL}}{{product.image}}" alt="">
         </div>
-        <div class="col-sm-6 ">
+
+        <div class="col-sm-12 col-md-6">
             <div class="caption">
-                
+
                 <h3>{{product.name}}
                 </h3>
                 <h4>Price: €{{product.price}}</h4>
@@ -17,57 +17,66 @@
                 <p>{{product.description | linebreaksbr }}</p>
                 <p><span class="boldtext">Stock:</span> {{ product.stock}} </p>
                 <p><span class="boldtext">SKU:</span> {{ product.sku }}</p>
-                
-                 <form method="POST" action="{% url 'add_to_cart'  %}">
-                     {% csrf_token %}
-                                    <input type="number" name="quantity" value="1"/>
-                                    <input class="btn btn-primary" type="submit" value="Add to cart"/>
-                                </form>
-                                
-                <a href="{% url 'make_review' product.id %}" class="btn btn-primary" value="Add Review">Add Review</a>
-                
-                 {% if can_edit %}
-                <a href="{% url 'edit_product' product.id %}" class="btn btn-primary" value="Add Review">Edit Print</a>
-                {% endif %}
+
+                <form method="POST" action="{% url 'add_to_cart'  %}">
+                    {% csrf_token %}
+                    <input type="number" name="quantity" value="1" />
+                    <input class="btn btn-outline-dark" type="submit" value="Add to cart" />
+                </form>
+
+
+                {% if can_edit %}
+                <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-dark" value="Add Review">Edit Print</a> {% endif %}
                 <hr>
-                
-                
-                
-                  
-                                    
-                                    
-                                
-
-                                
 
 
 
 
-            </div>
-        </div>
-    </div>
-</div>
- {% for review in product.reviews.all %}
-<div class = 'row'>
-    <div class="col-md-10 col-sm-9">
-                <h3>{{ review.title }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ review.content|truncatewords:30 }}</p>
+
+                <div id= 'review' class='row'>
+                    <div class="col-md-10 col-sm-9">
+                        <h4><b> Reviews</b></h4>
+                        {% for review in product.reviews.all %}
+                        <p>{% if review.author.artist %}
+                            <img src="{{MEDIA_URL}}{{review.author.artist.image}}" class="comment-img"> {% elif review.author.lover %}
+                            <img src="{{MEDIA_URL}}{{review.author.lover.image}}" class="comment-img"> {% else %}
+                            <img src="{% static 'admin/admin.jpeg' %}" class="comment-img"> {% endif %}
+                            <b>{{review.author}}</b>&nbsp{{ review.content|truncatewords:5 }}.... {{ review.created_date }} </p>
+
+
                         <!--gives first few words of post-->
-                        
-                        <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
-                        <p>{{review.author}}</p>
-                    
+
+                        {% endfor %}
+
+                        <a href="{% url 'make_review' product.id %}" class="btn btn-outline-dark" value="Add Review">Add Review</a>
+
+
+
                     </div>
+
+
                 </div>
             </div>
-            
-        
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-{% endfor %}
-
+</div>
 
 
 

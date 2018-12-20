@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -6,6 +7,7 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=254, default='')
     artist = models.CharField(max_length=50, default='')
+    
     sku = models.CharField(max_length=50, default='')
     description = models.TextField()
     image = models.ImageField(upload_to='images')

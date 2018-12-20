@@ -1,0 +1,77 @@
+ {% extends "base.html" %} {% block content %} 
+ 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<div class = 'row'>
+        <div class = 'col-xs-10 col-md-10'></div>
+        <div id = 'home' class = 'col-xs-2 col-md-2'>
+             <a href="{% url 'get_all_artists' %}"><i class="fas fa-arrow-left fa-2x white fa-lg"></i></a>
+    </div>
+    </div>
+    
+
+    
+
+
+<div class="container portfolio">
+  
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading">
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+    <div class="bio-info">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bio-image">
+                            
+                            <img class='img-circle profile-page'  src="{{ MEDIA_URL}}{{ artist.image }}" /> 
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bio-content">
+                    
+                    <h1>Artist : {{artist.user}}</h1>
+                   
+                   
+                   
+                    <h4><b>Salon:</b> {{artist.salon}}</h4>
+                    <p>{{artist.Bio}}</p>
+                    <p><b>Location:</b> {{artist.city}}</p>
+
+                 
+                    
+                 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class = 'container'>-->
+<!--    <div class = 'row'>-->
+<!--        <div class = 'col-sm-12 col-md-12'>-->
+<!--            <h2>Prints</h2>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="row1"> -->
+<!--  <div class="column1">-->
+<!--      {% for product in products %}-->
+      
+<!--    <img src="{{ MEDIA_URL}}{{ artist.user.product }}">-->
+    
+<!--    {% endfor %}-->
+   
+<!--  </div>-->
+<!--</div>-->
+{% endblock %}

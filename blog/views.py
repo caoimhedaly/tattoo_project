@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.contrib.auth.decorators import permission_required
 from accounts.models import Artist
 from reviews.forms import ReviewForm, CommentForm
+from django.views.generic import RedirectView
 
 # Create your views here.
 
@@ -127,13 +128,29 @@ def make_comment(request, id):
         form = CommentForm()
         return render(request, 'reviews/form.html', {'form':form})
         
-def like_post(request, id):
-    post = get_object_or_404(POst, pk=id)
+
     
-    post.likes += 1
-    post.save()
+@login_required 
+def post_like(request, id):
+        
+        
+      post = get_object_or_404(Post, pk=id)
+        
+      user = request.user
       
-    return render(request, "blog/read_post.html", {'post': post})
+      if user in post.likes.all():
+            post.likes.remove(user)
+      else:
+        post.likes.add(user)
+       
+      return render(request, "blog/read_post.html", {'post': post}) 
+
+
+    
+def trial_artists(request):
+    
+    artists = Artist.objects.all()
+    return render( request, "blog/trial_artists.html", {'artists': artists})
     
     
     

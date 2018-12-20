@@ -2,6 +2,7 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+<div class = 'container'>
 <h2>Login</h2>
 
 <form method="post">
@@ -11,6 +12,8 @@
   
   <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
 
-  <button type="submit">Login</button>
+   <button type="submit" class="btn btn-warning">Login</button>
 </form>
+
+</div>
 {% endblock %}

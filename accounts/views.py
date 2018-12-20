@@ -3,6 +3,7 @@ from .forms import  AddictForm, ArtistForm, SignUpForm
 from django.contrib import auth
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
+from accounts.models import Artist
 
 
 def get_index(request):
@@ -69,5 +70,11 @@ def register_lover(request):
         addict_form =AddictForm()
 
     return render(request, "registration/signup.html", {'user_form': user_form, 'profile_form':addict_form})
+    
+    
+def artist_detail(request, id):
+   
+      artist = get_object_or_404(Artist, pk=id)
+      return render(request, 'ecommerce/artist_profile.html', {'artist':artist})
     
 

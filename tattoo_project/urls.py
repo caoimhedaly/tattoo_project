@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
 
 from django.urls import path, include
 from accounts.views import get_index
-from accounts.views import register_artist, register_lover, read_profile
+from accounts.views import register_artist, register_lover, read_profile, artist_detail
 from blog import urls as blog_urls
 from django.views.static import serve
 from django.conf import settings
@@ -48,4 +49,7 @@ urlpatterns = [
     path('products/add', add_product, name='add_product'),
     path('review/<int:id>/form', make_review, name= 'make_review'),
     path('comment/<int:id>/form', make_comment, name= 'make_comment'),
+    path('ecommerce/<int:id>/artist_detail', artist_detail, name = 'artist_detail'),
+    
+    
 ]

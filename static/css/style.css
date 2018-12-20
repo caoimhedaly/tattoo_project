@@ -12,15 +12,15 @@ h1{
 body {
     
    font-family: 'Nanum Gothic', sans-serif;
-    padding-top: 50px;
+    padding-top: 20px;
     background-color: #152836;
     color:white;
 }
 
 footer {
     margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #D4AF37;
 }
 
@@ -210,6 +210,9 @@ input{
     color:white;
 }
 
+
+
+
 #chair{
     width:100%;
     height:600px;
@@ -254,6 +257,7 @@ input{
 .cart {
   background: #55ACEE;
   color: white;
+  
 }
 
 .profile {
@@ -276,12 +280,113 @@ input{
   font-size: 30px;
 }
 
+/*-------------------------------*/
+
 h3{
     font-family: 'Permanent Marker', cursive;
 }
 
 #video{
     padding-top: 40px;
+    
     filter:invert(1);
 }
 
+#dragon{
+    padding-top: 40px;
+    padding-left:40px;
+    /*padding-right: 20px;*/
+    width:100%;
+    height:500px;
+    text-align: center;
+    
+}
+    
+@media only screen and (max-width: 1000px) {
+    #dragon{
+       
+            display: none;
+        
+    }
+    
+}
+
+/*background wallpaper prints*/
+#bg2{
+    
+    
+    background-position: top;
+    background-attachment: fixed;
+}
+
+
+
+.thumbnail{
+    margin-left: 40px;
+    margin-right: 40px;
+    height:330px;
+}
+
+#print{
+    text-align: center;
+}
+
+.print {
+    padding: 20px;
+    border: 10px solid #D4AF37;
+    color: #D4AF37;
+    background-color: black;
+}
+
+#home{
+    position: fixed;
+    top:40px;
+    left:10px;
+    color:white;
+}
+
+/* Centered text homepage*/
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-block{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#prints{
+    margin-bottom: 30px;
+}
+
+#product_name{
+    color:black;
+}
+
+.comment-img{
+  width:30px;
+  height: 30px;
+  border-radius:50%;
+  
+}
+
+#review{
+    text-align: left;
+}

@@ -1,6 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static from staticfiles %}  {{ block.super }}
 
 {% block content %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<div class = 'container'>
 
 {% if items_in_cart > 0 %}
 <!--if there are cart items then display the table-->
@@ -56,5 +58,7 @@
 {% else %}
 <h1>You have no items in your cart.</h1>
 {% endif %}
+
+</div>
 
 {% endblock %}

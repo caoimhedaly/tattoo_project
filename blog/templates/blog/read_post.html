@@ -52,7 +52,10 @@
             <img src="{{MEDIA_URL}}{{post.image}}" class = 'img-blogpost' ></img>
             {% endif %}
             <div class = 'row'>&nbsp</div>
-            <p class = 'post_content'>{{ post.content}}</p>
+            <p class = 'post_content'>{{ post.content}}
+             {% if can_edit %}
+                    <a href="{% url 'edit_post' post.id %}" class="btn btn-default">....Edit Post</a>
+                   {% endif %} </p>
             
             <div class="row">
                 <div class="col-xs-9 col-md-12">
@@ -63,11 +66,21 @@
                   <a href="{% url 'make_comment' post.id %}"   <i class="far fa-comment-dots fa-2x"></i></a>
                   </div>
                     <div class = 'col-xs-3 col-md-1'>
-                  <i class="far fa-heart fa-2x"></i>
+                  <a href="{% url 'post_like' post.id %}" <i class="far fa-heart fa-2x"></i></a>
                   </div>
                   
                   </div>
-                    <p>{{ post.views }}<span class="boldtext">&nbspviews</span> </p>
+                  <div class = 'row'>
+                      <div class = 'col-sm-1'>
+                    <views>{{ post.views }}<span class="boldtext">&nbspviews&nbsp</views>
+                    </div>
+                    <div class = 'col-sm-1'>
+                    <likes> &nbspLikes:{{post.likes.count}}</likes>
+                    </div>
+                   
+                   </div>
+                    
+
                     
                     {% if post.taglist|length > 0 %}
                         <p><span class="boldtext">Tags:</span>
@@ -77,26 +90,15 @@
                         {% endif %}
                         
                         
-                        <a href="#" onClick="document.getElementById('likebutton').submit()">Like This Post</a> {{eachpost.likes}}   |   <a href="#" onClick="document.getElementById('dislikebutton').submit()">Dislike This Post</a> {{eachpost.dislikes}}
+                        
 
 
-<form id="likebutton" method="POST" action="/posts/{{eachpost.id}}/preference/1/">
-{% csrf_token %}
-<input type="hidden">
-</form>
-
-<form id="dislikebutton" method="POST" action="/posts/{{eachpost.id}}/preference/2/">
-{% csrf_token %}
-<input type="hidden">
-</form>
 
 
                     
                     
                     
-                   {% if can_edit %}
-                    <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
-                   {% endif %} 
+                  
                   
                    
                  
@@ -105,15 +107,16 @@
                 
                 </div>
             </div>
-                {% for comment in post.comments.all %}
+               
 <div class = 'row'>
     <div class="col-md-10 col-sm-9">
         <h5> Comments</h5>
-                <p>{% if post.author.artist %}
-                <img src="{{MEDIA_URL}}{{post.author.artist.image}}" class="comment-img" >
+         {% for comment in post.comments.all %}
+                <p>{% if comment.author.artist %}
+                <img src="{{MEDIA_URL}}{{comment.author.artist.image}}" class="comment-img" >
               
-                {% elif post.author.lover %}
-                <img src="{{MEDIA_URL}}{{post.author.lover.image}}" class="comment-img" >
+                {% elif comment.author.lover %}
+                <img src="{{MEDIA_URL}}{{comment.author.lover.image}}" class="comment-img" >
                  {% else %}
                 <img src="{% static 'admin/admin.jpeg' %}" class="comment-img">
                  {% endif %}
@@ -122,7 +125,7 @@
                         
                         <!--gives first few words of post-->
                         
-                        
+                      {% endfor %}      
                         
                    <a href="{% url 'make_comment' post.id %}"  value="Add Review">Add Comment...</a>
                     
@@ -132,7 +135,7 @@
             
         
     </div>
-    {% endfor %}
+
 
         </div>
     </div>
