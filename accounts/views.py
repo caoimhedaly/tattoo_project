@@ -76,5 +76,7 @@ def artist_detail(request, id):
    
       artist = get_object_or_404(Artist, pk=id)
       return render(request, 'ecommerce/artist_profile.html', {'artist':artist})
+      
+
     
 

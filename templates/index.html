@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
+
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 
@@ -37,10 +39,12 @@
 <div class = 'col-sm-6 '>
            
 <h3> <a href="{% url 'register_artist' %}"> Artists  <i class="fas fa-user-plus"></i></a></h3>
+<h4><p>Upload your details, reach international clients and sell your artwork</p></h4>
 </div> 
           <div class = 'col-sm-6'>
            
                <h3><a href="{% url 'register_lover' %}">Addicts  <i class="fas fa-user-plus"></i></a></h3>
+             <h4>  <p>Browse local and international tattooists </p></h4>
        </div>
        </div>
        
@@ -66,6 +70,36 @@
     </div>
     
     </div>
+  <hr>
+  
+  <div class = 'row text'>
+      <div class = 'col-sm-12'>
+          <h3>Not ready for a Tattoo? &nbsp   Buy a print instead!  <a href="{% url 'product_list' %}">Click<i class="fas fa-arrow-right"></i></a></h3>
+      </div>
+  </div>
+  
+  <hr class = 'bottom_line'>
+  
+  <div class="container">
+	<div class="row">
+	    <div class = 'col-md-6 col-sm-12'>
+		<div class="col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="media/images/two_hands.jpeg" /></div>
+		
+        <div class="col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="media/images/left_arm_tat.jpeg" /></div>
+      
+      <div class = 'row'>
+          <div class = 'col-sm-12'>
+             
+              <span><a href="{% url 'add_post' %}"> <h3>Click to Display your INK</h3></a></span>
+          </div>
+      </div>
+      </div>
+        
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="media/images/back tattoo.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="media/images/arm_tat.jpg" /></div>
+    
+    </div>
+</div>
 
 
 

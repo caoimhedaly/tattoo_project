@@ -12,13 +12,13 @@ h1{
 body {
     
    font-family: 'Nanum Gothic', sans-serif;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     background-color: #152836;
     color:white;
 }
 
 footer {
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #D4AF37;
@@ -121,7 +121,8 @@ a, a:hover {
 }
 
 .thumbnail {
-    margin-bottom: 8px;
+    margin-bottom: 25px;
+    margin-left: 15px;
 }
 
 .img-container {
@@ -208,6 +209,7 @@ input{
 #cart{
     float: right;
     color:white;
+    margin-top: 40px;
 }
 
 
@@ -319,7 +321,7 @@ h3{
     background-attachment: fixed;
 }
 
-
+/*prints*/
 
 .thumbnail{
     margin-left: 40px;
@@ -389,4 +391,25 @@ h3{
 
 #review{
     text-align: left;
+}
+
+.row .text {
+    text-align: center;
+}
+
+span{
+    vertical-align: middle;
+}
+
+.container, form{
+    margin-bottom: 20px;
+}
+
+.bottom_line{
+    margin-bottom: 40px;
+}
+
+.fa-shopping-cart{
+  float: right;
+  color:white;
 }

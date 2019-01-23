@@ -52,4 +52,5 @@ urlpatterns = [
     path('ecommerce/<int:id>/artist_detail', artist_detail, name = 'artist_detail'),
     
     
+    
 ]

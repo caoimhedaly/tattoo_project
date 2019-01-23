@@ -102,11 +102,7 @@ def view_test(request):
     
     posts = Post.objects.filter(published_date__lte = timezone.now())
     return render( request, "blog/test-posts.html", {'posts': posts})
-    
-def get_all_artists(request):
-    
-    artists = Artist.objects.all()
-    return render( request, "blog/all_artists.html", {'artists': artists})
+
 
 def make_comment(request, id):
     post = get_object_or_404(Post, pk=id)

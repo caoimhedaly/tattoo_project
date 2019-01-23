@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+     {% for artist in artists %}
+  <div class="column">
+    <div class="card">
+       
+      <img id = 'artist' src="{{MEDIA_URL}}{{artist.image}}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>{{artist.name}}</h2>
+        <p class="title"><b>Salon</b>{{artist.salon}}</p>
+        <p id = 'bio'>{{artist.Bio|truncatewords:17}}</p>
+        <p><b>Location: </b>{{artist.city}}</p>
+        <a href="{% url 'artist_detail' artist.id %}"><p><button class="button">Profile</button></p></a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  
+  </div>
+  
+  </div>

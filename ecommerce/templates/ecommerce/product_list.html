@@ -17,6 +17,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
+    <script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 </head>    
 <body>
 
@@ -29,8 +43,11 @@
         
         <div id = 'home' class = 'col-xs-2 col-md-2'>
             
-             <a href="{% url 'get_index' %}"><i class="fas fa-arrow-left fa-2x"></i></a>
+            <a href="{% url 'get_index' %}"><i class="fas fa-arrow-left fa-2x"> </i></a>
     </div>
+    
+    <a  href="{% url 'view_cart' %}"><i  id = 'postcart' class="fa fa-shopping-cart fa-2x"></i></a>
+    
     </div>
         
         <header id = 'prints' class = 'row'>
@@ -79,6 +96,21 @@
     
     </div>
     </div>
+    <footer>
+        <div class="container">
+            <div class = 'row'>
+                <div class = 'col-xs-4 col-md-4'>
+    <div class="fb-like" data-href="http://tattoo-project-keve87.c9users.io:8080/" data-width="20px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+        </div>
+        <div class = 'col-xs-4 col-md-4'>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class = 'col-xs-4 col-md-4'>
+            <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"></a>
+        </div>
+         </div>
+         </div>
+    </footer>
     
     
 </body>

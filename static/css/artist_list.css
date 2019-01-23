@@ -18,13 +18,19 @@ html {
     width: 100%;
     display: block;
   }
+} 
+
+@media screen and (max-width: 1000px) {
+  #bio{
+    display: none;
+  }
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   height:500px;
-  margin-left: 15px;
+ 
   margin-right: 15px;
   margin-bottom: 30px;
 }
@@ -53,6 +59,7 @@ html {
   text-align: center;
   cursor: pointer;
   width: 100%;
+  
 }
 
 .button:hover {
@@ -77,6 +84,39 @@ h1{
     font-family: 'Permanent Marker', cursive;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
 }
+
+#icon{
+    color:white;
+    margin-top: 30px;
+}
+
+#home{
+    color:white;
+}
+
+hr{
+  background-color:  #D4AF37;
+  color: #D4AF37;
+  height: 7px;
+  border: none;
+  width:100%;
+  margin-bottom: 30px;
+  
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #D4AF37;
+    text-align: center;
+}
+.fb-like{
+    display: inline-block;
+}
+
+
+
