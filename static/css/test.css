@@ -1,6 +1,6 @@
 
-body{
-  background-color: #152836;
+.home{
+  background-color: #59253A;
   color:white;
 }
 
@@ -9,7 +9,7 @@ body{
 }
 
 
-h2{color:#fff;margin-bottom:40px;text-align:center;font-weight:100;}
+h1{color:#fff;margin-bottom:40px;text-align:center;font-weight:100; font-family: 'Monoton', cursive;}
 
 .demo-gallery > post {
   margin-bottom: 0;
@@ -73,19 +73,20 @@ h2{color:#fff;margin-bottom:40px;text-align:center;font-weight:100;}
 }
 
 hr{
-  background-color:  #D4AF37;
-  color: #D4AF37;
-  height: 7px;
+  background-color: white;
+  color: white;
+  height:2px;
   border: none;
   width:100%;
+  margin-bottom: 50px;
 }
 
 .img-blogpost{
 
     
     padding: 20px;
-    border: 10px solid #D4AF37;
-    color: #D4AF37;
+    border: 10px solid #78244C;
+    color: white;
 
 }
 
@@ -94,3 +95,30 @@ hr{
   color:white;
 }
 
+a{
+  color:#0677A1;
+}
+
+
+footer {
+    /*margin-top: 40px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #78244C;
+}
+
+h3{
+  font-weight:100;
+  text-transform: uppercase;
+}
+
+#black-spacer{
+  color:#78244C;
+   background-color: #282E34;
+  height:50px;
+  text-align: center;
+}
+
+p{
+  padding-top: 10px;
+}

@@ -29,10 +29,7 @@ def user_can_edit_post(request, post):
 
     
 
-def get_all_posts(request):
-    
-    posts = Post.objects.filter(published_date__lte = timezone.now())
-    return render( request, "blog/all_posts.html", {'posts': posts})
+
     
 
     
@@ -147,8 +144,3 @@ def trial_artists(request):
     
     artists = Artist.objects.all()
     return render( request, "blog/trial_artists.html", {'artists': artists})
-    
-    
-    
-  
-

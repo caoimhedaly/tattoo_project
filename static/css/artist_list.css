@@ -30,6 +30,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   height:500px;
+  position:relative;
  
   margin-right: 15px;
   margin-bottom: 30px;
@@ -58,7 +59,9 @@ html {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 85%;
+  position: absolute;
+  bottom: 10px;
   
 }
 
@@ -79,28 +82,25 @@ html {
 
 h1{
     color:white;
-    text-shadow: 2px 2px red;
+    
     letter-spacing: 3px;
-    font-family: 'Permanent Marker', cursive;
+   font-family: 'Monoton', cursive;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 10px;
 
 }
 
-#icon{
-    color:white;
-    margin-top: 30px;
-}
+
 
 #home{
     color:white;
 }
 
 hr{
-  background-color:  #D4AF37;
-  color: #D4AF37;
-  height: 7px;
+  background-color:  White;
+  color: white;
+  height: 4px;
   border: none;
   width:100%;
   margin-bottom: 30px;
@@ -111,7 +111,8 @@ footer {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #D4AF37;
+    background-color:  #78244C;
+    
     text-align: center;
 }
 .fb-like{
@@ -119,4 +120,36 @@ footer {
 }
 
 
+
+#cart{
+  color:white;
+  float:right;
+  padding-top: 60px;
+ 
+}
+
+#icon {
+    color:white;
+    margin-top: 60px;
+    float:left;
+}
+
+body{
+ background-color: #59253A;
+ font-family: 'Julius Sans One', sans-serif;
+}
+
+#black-spacer{
+  color:#78244C;
+  background-color: black;
+  height:50px;
+  text-align: center;
+  vertical-align: central;
+
+}
+
+#copyright{
+  text-align: center;
+  padding-top: 15px;
+}
 
