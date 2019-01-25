@@ -123,10 +123,12 @@ footer {
 
 
 #cart{
-  color:white;
-  float:right;
-  padding-top: 60px;
- 
+    
+    color:white;
+    margin-top: 40px;
+    position:absolute;
+    top:20px;
+   right:50px;
 }
 
 #icon {
@@ -138,6 +140,7 @@ footer {
 body{
  background-color: #59253A;
  font-family: 'Julius Sans One', sans-serif;
+ position: relative;
 }
 
 #black-spacer{
