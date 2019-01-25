@@ -61,8 +61,15 @@ h1{color:#fff;margin-bottom:40px;text-align:center;font-weight:100; font-family:
     border-radius: 50%;
 }
 
+
+
+
 .far{
   size: x2;
+}
+
+.fb-like{
+  padding-top: 10px;
 }
 
 .comment-img{
@@ -87,6 +94,7 @@ hr{
     padding: 20px;
     border: 10px solid #78244C;
     color: white;
+    width: 100%;
 
 }
 
@@ -97,6 +105,7 @@ hr{
 
 a{
   color:#0677A1;
+  
 }
 
 
@@ -105,7 +114,12 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #78244C;
+    text-align: center;
 }
+
+
+
+
 
 h3{
   font-weight:100;

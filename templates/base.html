@@ -51,12 +51,9 @@
     
    
     <div class = 'row'>
-        <div class = 'col-xs-11 col-md-11'></div>
-        <div id = 'cart' class = 'col-xs-1 col-md-1'>
-             <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart fa-2x"></i>{% if items_in_cart > 0 %}
-                        <label class="badge badge-light">{{items_in_cart}}</label>
-                        {% endif %}
-    </div>
+        <div class = 'col-sm-12'>
+            <h1>&nbsp</h1>
+        </div>
     </div>
     
     <header class = 'row'>
@@ -83,11 +80,7 @@
                     {% if user.is_authenticated %}
                   
                         <li><a href="{% url 'read_profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-
-                 
-          <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-                       
-                 
+                        
                 
                         <li><a href="{% url 'add_post' %}"><i class="fa fa-plus"></i> Share your Art</a></li>
                    
@@ -107,6 +100,13 @@
                     <li><a href="{% url 'product_list' %}"> Prints</a></li>
                     <li><a href="{% url 'view_test' %}"> Tattoos</a></li>
                     
+                    {% if user.is_authenticated %}
+                     <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                     {% if items_in_cart > 0 %}
+                        <label class="badge badge-light">{{items_in_cart}}</label>
+                        {% endif %}
+                     <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    {% endif %}
                     
                         </a>
                     </li>
@@ -125,7 +125,7 @@
         <div class="container">
             <div id = 'footer' class = 'row'>
                 <div class = 'col-xs-4 col-md-4'>
-    <div class="fb-like" data-href="http://tattoo-project-keve87.c9users.io:8080/" data-width="20px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         </div>
         <div class = 'col-xs-4 col-md-4'>
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

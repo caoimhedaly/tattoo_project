@@ -19,6 +19,8 @@ def add_to_cart(request):
     request.session['cart'] = cart
     
     return redirect('/')
+    
+    
    
    
 def view_cart(request):

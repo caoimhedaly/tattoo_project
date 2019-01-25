@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% block content %} {% load static from staticfiles %}
 <div class='container'>
     <div class='row'>
-        <div id='print' class="col-sm-12 col-md-6 ">
+        <div id='print' class="col-xs-12 col-md-6 ">
 
             <img class='print' width="300px" height="300px" src="{{MEDIA_URL}}{{product.image}}" alt="">
         </div>
 
-        <div class="col-sm-12 col-md-6">
+        <div class="col-xs-12 col-md-6">
             <div class="caption">
 
                 <h3>{{product.name}}
@@ -19,22 +19,29 @@
                 <p><span class="boldtext">SKU:</span> {{ product.sku }}</p>
 
                 <form method="POST" action="{% url 'add_to_cart'  %}">
-                    {% csrf_token %}
-                    <input type="number" name="quantity" value="1" />
-                    <input class="btn btn-outline-dark" type="submit" value="Add to cart" />
-                </form>
+                            {% csrf_token %}
+                            <input type="hidden" name="product" value='{{product.id}}' />
+                            <!--not visible on screen-->
+                            <input id = 'number' type="number" name="quantity" value="1" />
+                            <input id = 'print-button' class="btn btn-primary" type="submit" value="Add to cart" />
+                        </form>
 
 
                 {% if can_edit %}
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-dark" value="Add Review">Edit Print</a> {% endif %}
-                <hr>
+               
 
-
+  </div>
+  </div>
+   </div>
+   
+    <hr>
+  
 
 
 
                 <div id= 'review' class='row'>
-                    <div class="col-md-10 col-sm-9">
+                    <div class="col-xs-12">
                         <h4><b> Reviews</b></h4>
                         {% for review in product.reviews.all %}
                         <p>{% if review.author.artist %}
@@ -44,7 +51,7 @@
                             <b>{{review.author}}</b>&nbsp{{ review.content|truncatewords:5 }}.... {{ review.created_date }} </p>
 
 
-                        <!--gives first few words of post-->
+                      
 
                         {% endfor %}
 
@@ -59,7 +66,7 @@
             </div>
 
 
-        </div>
+       
 
 
 

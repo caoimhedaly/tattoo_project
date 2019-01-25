@@ -331,7 +331,7 @@ input{
 }
 
 
-/*prints*/
+/*prints...............................*/
 
 
 #print{
@@ -368,13 +368,13 @@ input{
     padding-top: 0px;
     position: absolute;
     bottom: 20px;
-    left:80px;
+    left:120px;
 }
 
 #print-button{
     position: absolute;
     bottom: 0px;
-    left:80px;
+    left:150px;
     padding: 0px;
     
 }
@@ -386,7 +386,7 @@ input{
   
 }
 
-#review{
+.review{
     text-align: left;
 }
 
