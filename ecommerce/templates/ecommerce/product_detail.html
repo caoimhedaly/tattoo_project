@@ -18,6 +18,9 @@
                 <p><span class="boldtext">Stock:</span> {{ product.stock}} </p>
                 <p><span class="boldtext">SKU:</span> {{ product.sku }}</p>
 
+               
+                  {% if user.is_authenticated %}
+               
                 <form method="POST" action="{% url 'add_to_cart'  %}">
                             {% csrf_token %}
                             <input type="hidden" name="product" value='{{product.id}}' />
@@ -25,7 +28,7 @@
                             <input id = 'number' type="number" name="quantity" value="1" />
                             <input id = 'print-button' class="btn btn-primary" type="submit" value="Add to cart" />
                         </form>
-
+{% endif %}
 
                 {% if can_edit %}
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-dark" value="Add Review">Edit Print</a> {% endif %}

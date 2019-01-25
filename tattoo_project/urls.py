@@ -18,7 +18,7 @@ from django.conf.urls import url
 
 from django.urls import path, include
 from accounts.views import get_index
-from accounts.views import register_artist, register_lover, read_profile, artist_detail
+from accounts.views import register_artist, register_lover, read_profile, artist_detail, get_signup
 from blog import urls as blog_urls
 from django.views.static import serve
 from django.conf import settings
@@ -50,6 +50,7 @@ urlpatterns = [
     path('review/<int:id>/form', make_review, name= 'make_review'),
     path('comment/<int:id>/form', make_comment, name= 'make_comment'),
     path('ecommerce/<int:id>/artist_detail', artist_detail, name = 'artist_detail'),
+    path('register/signup', get_signup, name='get_signup'),
     
     
     

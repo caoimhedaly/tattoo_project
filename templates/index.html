@@ -20,8 +20,52 @@
     
   </div>
 </div>
-              
-            
+
+  {% if user.is_authenticated %}
+  
+ <div class = 'row'>
+     <h1>&nbsp</h1>
+ </div>
+
+{% else %}
+
+<div id = 'button' class ='row'>
+    <div class ='col-sm-12'>
+<!-- Button trigger modal -->
+<button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
+  <h5>SIGNUP <i class="fas fa-user-plus"></i></h5>
+</button>
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle">Signup</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <a href="{% url 'register_artist' %}"><button type="button" class="btn btn-primary btn-lg">Artist</button></a>
+        <a href="{% url 'register_lover' %}"><button type="button" class="btn btn-primary btn-lg pull-right">Addict</button></a>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!--<div class = 'row'>-->
+<!--    <div class = 'signup col-sm-12'>-->
+<!--        <h2> <a href="{% url 'get_signup' %}"> Signup <i class="fas fa-user-plus"></i></a></h2>-->
+<!--    </div>-->
+<!--</div>-->
+
+ 
+ {% endif %}           
               
               
               

@@ -570,7 +570,7 @@ h3 {
 }
 
 #chair{
-    padding-bottom: 60px;
+    padding-bottom: 10px;
 }
 
 /*  text */
@@ -594,4 +594,18 @@ h3 {
 width: 70%;
 height: 60%;
 }
+}
+
+
+
+#button{
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+.modal-title{
+    color:black;
+    text-align: center;
 }

@@ -87,6 +87,8 @@
 
                         </h4>
                         <p>{{product.brand}}</p>
+                        
+                        {% if user.is_authenticated %}
 
                         <form method="POST" action="{% url 'add_to_cart'  %}">
                             {% csrf_token %}
@@ -95,6 +97,7 @@
                             <input id = 'number' type="number" name="quantity" value="1" />
                             <input id = 'print-button' class="btn btn-primary" type="submit" value="Add to cart" />
                         </form>
+                        {% endif %}
 
                     </div>
                 </div>

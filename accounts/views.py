@@ -79,4 +79,5 @@ def artist_detail(request, id):
       
 
     
-
+def get_signup(request):
+    return render(request, 'signup.html')
