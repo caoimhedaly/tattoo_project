@@ -10,7 +10,7 @@ SECRET_KEY = '@h*b^cvqbv=la_xf&qb6r4$5s(j3yydbl&$p%!qt*1=bd#g&pl'
 
  
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 

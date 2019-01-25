@@ -215,16 +215,10 @@ input{
 
 /*homepage........*/
 
-#chair{
-    width:100%;
-    height:600px;
-    background:cover;
- 
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-image: url("static/images/tattoo_chair.jpg");
-    margin-bottom: 60px;
-}
+
+
+
+
 
 
 .home {
@@ -520,12 +514,12 @@ p{
 }
 
 #bgimg-2 {
-  background-image: url("/media/images/two_hands.jpeg");
+  background-image: url("/static/images/two_hands.jpeg");
   min-height: 400px;
 }
 
 #bgimg-3 {
-  background-image: url("/media/images/rose_hand_tattoo.jpeg");
+  background-image: url("/static/images/rose_hand_tattoo.jpeg");
   min-height: 400px;
 }
 
@@ -566,3 +560,38 @@ h3 {
     padding-left: 40px;
 }
 
+/*chair image text overlay homepage....................*/
+
+/* Container holding the image and the text */
+
+.container {
+  position: relative;
+  
+}
+
+#chair{
+    padding-bottom: 60px;
+}
+
+/*  text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  width:500px;
+  height:100px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .text-block{
+width: 70%;
+height: 60%;
+}
+}
