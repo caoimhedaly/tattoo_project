@@ -40,22 +40,16 @@
 <body>
    <div class="container" style=" margin-bottom:60px">
 
-   
 
         <div class='row'>
 
             <div id='icon' class='col-xs-1 col-md-1'>
                 <a id='home' href="{% url 'get_index' %}"><i class="fas fa-arrow-left fa-2x"></i></a>
             </div>
-
+</div>
             <div class='col-sm-10'>&nbsp</div>
 
-
-            <div id='cart' class='col-xs-1 col-md-1'>
-                <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart fa-2x" style="color:white"></i></a>{% if items_in_cart > 0 %}
-                <label class="badge badge-light">{{items_in_cart}}</label> {% endif %}
-            </div>
-        </div>
+ 
 
 <div class = 'row'>
     <div class = 'col-sm-12'>

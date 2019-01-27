@@ -22,7 +22,7 @@
         
         {% for item in cart_items %}
         <tr>
-            <td><img width="150" height="75" src="{{ MEDIA_URL }}{{ item.image}}"/></td>    
+            <td><img id = 'item' width="150" height="75" src="{{ MEDIA_URL }}{{ item.image}}"/></td>    
             <td>{{ item.name }}</td>    
             <td>{{ item.quantity }}</td>    
             <td>€{{ item.price }}</td>
@@ -31,7 +31,7 @@
                 {% csrf_token %}
                 <input type="hidden" name="product" value = '{{ item.id }}' />
                 <!--this sends item id via form to remove item-->
-                <input type="submit" class="btn btn-success" value="Remove"/>
+                <input type="submit" class="btn btn-success btn-xs" value="Remove"/>
                 </form>
             </td>
         </tr>
