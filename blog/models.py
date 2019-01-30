@@ -30,7 +30,7 @@ class Post(models.Model):
     
     
     # counts views
-    image= models.ImageField(upload_to='images', null=True, blank=True)
+    image= models.ImageField(upload_to='images', null=True, blank=False)
     tags = models.CharField(max_length=255, null=True, blank=True)
     
     

@@ -50,17 +50,8 @@
 <body>
     
    
-    <div class = 'row'>
-        <div class = 'col-sm-12'>
-            <h1>&nbsp</h1>
-        </div>
-    </div>
     
-    <header class = 'row'>
-        <div class = 'col-sm-12 text-align-center'>
-            <h1>The Tattoo Project</h1>
-        </div>
-    </header>
+    
     <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default">
         <div class="container">
@@ -75,7 +66,7 @@
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-center">
+                <ul class="nav navbar-nav ">
                     <li><a href="{% url 'get_index' %}"> Home</a></li>
                     {% if user.is_authenticated %}
                   
@@ -118,6 +109,18 @@
         </div>
     </nav>
    
+   <header class = 'row'>
+        <div class = 'col-sm-12 text-align-center'>
+            <h1>INKSPIRATIONAL</h1>
+        </div>
+    </header>
+    
+    <div class = 'row'>
+        <div class = 'col-sm-12'>
+            <h1>&nbsp</h1>
+        </div>
+    </div>
+    
   
         {% block content %} {% endblock %}
         

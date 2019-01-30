@@ -18,7 +18,7 @@ def add_to_cart(request):
     # new quantity in cart added to original quantity
     request.session['cart'] = cart
     
-    return redirect('/')
+    return redirect('/ecommerce/product_list')
     
     
    

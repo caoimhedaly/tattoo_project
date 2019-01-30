@@ -45,7 +45,7 @@ def read_post(request, id):
       can_publish = is_in_group(request.user, 'publisher')
      
       
-      #only author/superuser/editor can edit blog
+      #only author/superuser/editor can edit post
       #only publisher can publish
       
       return render(request, "blog/read_post.html", {'post': post, 'can_edit': can_edit, 'can_publish':can_publish})
@@ -82,17 +82,17 @@ def edit_post(request, id):
         return render(request, "blog/form.html", {'form': form })
  
 
-@permission_required('blog.can_publish')
-def get_unpublished_posts(request):
-    posts = Post.objects.filter(published_date__gte = timezone.now())
-    return render(request, "blog/index.html", {'posts': posts})    
+# @permission_required('blog.can_publish')
+# def get_unpublished_posts(request):
+#     posts = Post.objects.filter(published_date__gte = timezone.now())
+#     return render(request, "blog/index.html", {'posts': posts})    
     
-@permission_required('blog.can_publish')
-def publish_post(request, id):
-    post = get_object_or_404(Post, pk=id)
-    post.published_date = timezone.now()
-    post.save()
-    return redirect(read_post, post.id)
+# @permission_required('blog.can_publish')
+# def publish_post(request, id):
+#     post = get_object_or_404(Post, pk=id)
+#     post.published_date = timezone.now()
+#     post.save()
+#     return redirect(read_post, post.id)
      
 def view_test(request):
 

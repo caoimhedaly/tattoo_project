@@ -9,12 +9,10 @@ from accounts.models import Artist
 def get_index(request):
     return render(request, 'index.html')
     
+
 def read_profile(request):
     return render(request, 'profile2.html')
     
-    
-
-
     
 def register_artist(request):
     

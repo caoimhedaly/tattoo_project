@@ -10,16 +10,17 @@
             
             
              
-      
+     
            
               
-<div id = 'chair' class="container">
-  <img src="static/images/tattoo_chair.jpg" alt="TATTOO_CHAIR" style="width:100%;">
+<div id = 'chair' class="container1">
+  <img src="static/images/tattoo_chair.jpg" alt="TATTOO_CHAIR" style="width:100%; height:500px;">
   <div class="text-block"> 
     <h2>WHERE ARTIST MEETS ADDICT </h2>
     
   </div>
 </div>
+
 
   {% if user.is_authenticated %}
   
@@ -58,13 +59,7 @@
 </div>
 
 
-<!--<div class = 'row'>-->
-<!--    <div class = 'signup col-sm-12'>-->
-<!--        <h2> <a href="{% url 'get_signup' %}"> Signup <i class="fas fa-user-plus"></i></a></h2>-->
-<!--    </div>-->
-<!--</div>-->
 
- 
  {% endif %}           
               
               
@@ -76,30 +71,34 @@
        
           
           <div class = 'container3'>
-
-<div class = 'row'>
-    <div class = 'txt-overlay col-sm-6 col-md-3'>
-        <img class = 'block-image' src="static/images/body_tat_artist.jpeg" alt = 'face tattoo'></img>
-         <div class="centered"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Upload your Ink</h2></button></div>
-    </div>
-    <div class = 'txt-overlay col-sm-6 col-md-3'>
-        <img class = 'block-image'src="static/images/print.jpeg" alt = 'print of lady'></img>
-         <div class="centered"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Prints</h2></button></div>
-    </div>
-    <div class = 'txt-overlay col-sm-6 col-md-3'>
-        <img class = 'block-image'src="static/images/hand-tattoo.jpg" alt = 'hand tattoo'></img>
-         <div class="centered"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Tattoos</h2></button></div>
-   </div>
-    <div class = 'txt-overlay col-sm-6 col-md-3'>
-        <img class = 'block-image'src="static/images/tattoo-gun.jpeg" alt = 'tattoo-gun'></img>
-         <div class="centered"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Artists</h2></button></div>
-    </div>
+              
+              
+              <div>
+        <div class = 'article'>
+             <div class = 'row'>
+                 <div class = 'col-sm-12'>
+                     <h1 id = 'article_heading'>ABOUT INKSPIRATIONAL</h1>
+                 </div>
+             </div>
+             <div class = 'row'>
+                 <h4 class = 'col-sm-12'>Bringing Tattoo lovers directly to the source.</h4> 
+             </div>
+             </div>
+             
+             <article class = 'row'>
+                 <div class = 'col-sm-12 col-md-6'>
+                     <p class = 'article'> This website is designed as a destination for creatives to stop by, express themselves and share ideas.</p>  
+                     <h2>Artists</h2>
+               
+                     <h4>
+                     Tattooist starting out on your feet or work independently? Upload your prints and your most recent designs to get your work noticed. Create a profile to advertise yourself and expand your clientbase.</h4>
+                 </div>
+                 <div class = 'col-sm-12 col-md-6'>
+                     <img class = 'back-tattoo' src="static/images/head-holding-tattoo.jpeg" alt = 'back tattoo'></img>
+                 </div>
 </div>
-</div>
-          
-         
 
-  
+
 
   
  
@@ -113,39 +112,20 @@
  
 
 
-<div>
-        <div class = 'article'>
-             <div class = 'row'>
-                 <div class = 'col-sm-12'>
-                     <h1 id = 'article_heading'>ABOUT THE TATTOO PROJECT</h1>
-                 </div>
-             </div>
-             <div class = 'row'>
-                 <h4 class = 'col-sm-12'>Bringing Tattoo lovers directly to the source.</h4> 
-             </div>
-             </div>
-             
-             <article class = 'row'>
-                 <div class = 'col-sm-12 col-md-6'>
-                     <p class = 'article'> This website is designed as a destination for creatives and alternative types to stop by, express themselves and share ideas. With artsists form all over Ireland diplaying their handywork here, if you are looking to update your body INK, you can be sure to find one that suits your personal style.  </p>
-                 </div>
-                 <div class = 'col-sm-12 col-md-6'>
-                     <img class = 'back-tattoo' src="static/images/head-holding-tattoo.jpeg" alt = 'back tattoo'></img>
-                 </div>
-</div>
+
+
+  
 <div id="bgimg-2">
-  <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-  </div>
 </div>
-<div style="position:relative;">
-  <div >
+
+   
    <article class = 'row'>
                  <div class = 'col-sm-12 col-md-6'>
                      <img class = 'back-tattoo' src="static/images/dark-image.jpeg" alt = 'dark image'></img>
                  </div>
                  <div class = 'col-sm-12 col-md-6'>
-                     <p class = 'article'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                     <p class = 'article'><h2>Addicts</h2><h4>Looking for some inkspiration?  With artsists from all over Ireland displaying their handywork here, you can be sure to find one that suits your personal style.</h4> </p>
+                     <p><h4>Upload images of your own most recent Ink. Or, if you're not quite ready to go under the needle, take a look at some of the prints for sale in our print gallery.   </h4> </p>
                  </div>
              </article>
               
@@ -154,31 +134,66 @@
   </div>
 </div>
 <div id="bgimg-3">
-  <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-  </div>
+  
 </div>
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+
 <div class = 'row'>
+    <div class = 'txt-overlay col-sm-6 col-md-3'>
+        <img class = 'block-image' src="static/images/body_tat_artist.jpeg" alt = 'face tattoo'></img>
+         <div class="centered"><li><a href="{% url 'add_post' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Upload your Ink</h2></button></a></li></div>
+    </div>
+    <div class = 'txt-overlay col-sm-6 col-md-3'>
+        <img class = 'block-image'src="static/images/print.jpeg" alt = 'print of lady'></img>
+         <div class="centered"> <li><a href="{% url 'product_list' %}"> <button type="button" class="btn btn-outline-dark btn-sm"><h2>Prints</h2></button></a></li></div>
+    </div>
+    <div class = 'txt-overlay col-sm-6 col-md-3'>
+        <img class = 'block-image'src="static/images/hand-tattoo.jpg" alt = 'hand tattoo'></img>
+         <div class="centered"><li><a href="{% url 'view_test' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Inkspiration</h2></button></a></li></div>
+   </div>
+    <div class = 'txt-overlay col-sm-6 col-md-3'>
+        <img class = 'block-image'src="static/images/tattoo-gun.jpeg" alt = 'tattoo-gun'></img>
+         <div class="centered"><li><a href="{% url 'trial_artists' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Tattooists</h2></button></a></li></div>
+    </div>
+</div>
+</div>
+<div  id = 'dark-row' style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      
+      
+      {% if user.is_authenticated %}
+      
+      <div class = 'row'>
+          <div class = 'col-sm-12'>
+              <h2>Feeling squeamish? Buy a print instead!  </h2><h2><a id = 'subtitle' href="{% url 'product_list' %}"> Prints</a></h2>
+          </div>
+      </div>
+      
+      {% else %}
+<div  class = 'row'>
 <div class = 'col-sm-6 '>
            
-<h3> <a href="{% url 'register_artist' %}"> Artists  <i class="fas fa-user-plus"></i></a></h3>
+<h3> <a class = 'signup' href="{% url 'register_artist' %}"> Artists  <i class="fas fa-user-plus"></i></a></h3>
 <h4><p>Upload your details, reach international clients and sell your artwork</p></h4>
 </div> 
           <div class = 'col-sm-6'>
            
-               <h3><a href="{% url 'register_lover' %}">Addicts  <i class="fas fa-user-plus"></i></a></h3>
+               <h3><a class = 'signup' href="{% url 'register_lover' %}">Addicts  <i class="fas fa-user-plus"></i></a></h3>
              <h4>  <p>Browse local and international tattooists </p></h4>
        </div>
        </div>
+       
+       {% endif %}
   </div>
 </div>
+
 <div id="bgimg-1">
-  <div class="caption">
-  <span class="border">COOL!</span>
-  </div>
+  
 </div>
+
+
+          
+          
+         
 
  <div class = 'container'>
           

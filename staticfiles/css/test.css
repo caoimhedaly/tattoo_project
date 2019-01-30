@@ -1,0 +1,154 @@
+
+.home{
+  background-color: #59253A;
+  color:white;
+}
+
+.white {
+  color:white;
+}
+
+
+h1{color:#fff;margin-bottom:40px;text-align:center;font-weight:100; font-family: 'Monoton', cursive;}
+
+.demo-gallery > post {
+  margin-bottom: 0;
+}
+.demo-gallery > post > div {
+    
+    margin-bottom: 15px;
+   
+    width: 200px;
+}
+.demo-gallery > post > div a { 
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  
+}
+.demo-gallery > post > div a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 200px;
+  width: 100%;
+}
+.demo-gallery > post > div a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+
+.home .demo-gallery {
+  padding-bottom: 80px; 
+}
+
+.img-blogpost{
+    height:350px;
+    width: auto;
+  
+}
+
+.img-circle{
+    width:100px;
+    height: 100px; 
+    padding-top: 0px;
+    border-radius: 50%;
+}
+
+
+
+
+.far{
+  size: x2;
+}
+
+.fb-like{
+  padding-top: 10px;
+}
+
+.comment-img{
+  width:30px;
+  height: 30px;
+  border-radius:50%;
+  
+}
+
+hr{
+  background-color: white;
+  color: white;
+  height:2px;
+  border: none;
+  width:100%;
+  margin-bottom: 50px;
+}
+
+.img-blogpost{
+
+    
+    padding: 20px;
+    border: 10px solid #78244C;
+    color: white;
+    width: 100%;
+
+}
+
+.fa-shopping-cart{
+  float: right;
+  color:white;
+}
+
+a{
+  color:#0677A1;
+  
+}
+
+
+footer {
+    /*margin-top: 40px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #78244C;
+    text-align: center;
+}
+
+
+
+
+
+h3{
+  font-weight:100;
+  text-transform: uppercase;
+}
+
+#black-spacer{
+  color:#78244C;
+   background-color: #282E34;
+  height:50px;
+  text-align: center;
+}
+
+p{
+  padding-top: 10px;
+}
+
+html, body {
+    
+   font-family: 'Julius Sans One', sans-serif;
+
+  
+    background-color: #59253A;
+    color:white;
+    
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
