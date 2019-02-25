@@ -1,7 +1,7 @@
 
 # Inkspirational
 
-View Inkspirational here https://keves-tattoo-project.herokuapp.com/>
+View Inkspiration here https://keves-tattoo-project.herokuapp.com/>
 
 Css validated by [jigsaw](https://jigsaw.w3.org/css-validator/).
  
@@ -15,7 +15,7 @@ I designed this website with two aims in mind:
 
 
 ## Wireframe 
-I designed the wireframe for Inkspirational using balsamiq. 
+I designed the wireframe for Inkspiration using balsamiq. 
 
 View my large screen wireframe [here](https://balsamiq.cloud/s66rq4k/px2ud9x).
 
@@ -24,7 +24,7 @@ View my mobile view wireframe [here](https://balsamiq.cloud/s66rq4k/pi0ekbn).
  
 ## UX
 
-####Megan: I am a 37yr old independent Tattoo artist. By signing up to the Inkspirational website I was able to create my own profile page with details about my designs, my experience and how to contact me. I can also upload photos of my artwork for potential consumers to view. Not only that, Inkspirational is the perfect platform to sell copies of my prints. 
+####Megan: I am a 37yr old independent Tattoo artist. By signing up to the Inkspiration website I was able to create my own profile page with details about my designs, my experience and how to contact me. I can also upload photos of my artwork for potential consumers to view. Not only that, Inkspirational is the perfect platform to sell copies of my prints. 
 
 ####John: I am a 41yr old carpenter and tattoo fanatic. I'm always on the lookout for new artists and tattoo ideas. By signing up to Inkspirational, I am able to browse the profiles of independent Tattooists and buy their prints. I can also browse the tattoos uploaded by likeminded ink fans and have uploaded pictures of some of my own. 
 
@@ -192,7 +192,7 @@ I followed a [Bootstrtap](https://getbootstrap.com/docs/4.0/components/card/) tu
 
 ## Deployment
 
-View Inkspirational on heroku [here](https://keves-tattoo-project.herokuapp.com/).
+View Inkspiration on heroku [here](https://keves-tattoo-project.herokuapp.com/).
 
 1. I deployed My django project using the Heroku cloud app platform as follows: 
 
