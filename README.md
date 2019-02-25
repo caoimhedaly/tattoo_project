@@ -1,5 +1,5 @@
 
-# Inkspirational
+# Inkspiration
 
 View Inkspiration here https://keves-tattoo-project.herokuapp.com/>
 

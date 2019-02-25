@@ -129,8 +129,11 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color:  #78244C;
-    
-    text-align: center;
+     position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  text-align: center;
 }
 .fb-like{
     display: inline-block;
