@@ -20,17 +20,19 @@ class TestDjango(TestCase):
         
         page = self.client.get('/products/{0}/edit'.format(product.id))
         self.assertEqual(page.status_code, 302)
-        # self.assertTemplateUsed(page, "ecommerce/form.html") 
+        
+        
+    def test_add_product(self):
+        product = Product(name='Create a Test', price=0)
+        product.save()
+        
+        page = self.client.get('/products/add')
+        self.assertEqual(page.status_code, 302)
         
         
         
-    #   def test_edit_post(self):
-    #     post = Post(title='Create a Test')
-    #     post.save()
         
-    #     page = self.client.get("/posts/{0}/edit".format(post.id))
-    #     self.assertEqual(page.status_code, 200)
-    #     self.assertTemplateUsed(page, 'blog/form.html')
+    
   
 
         

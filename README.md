@@ -1,10 +1,9 @@
 
-# The Tattoo Project
+# Inkspirational
 
-View the Tattoo Project at <https://keves-tattoo-project.herokuapp.com/>
+View Inkspirational here https://keves-tattoo-project.herokuapp.com/>
 
-Css validated by jigsaw.
-<http://jigsaw.w3.org/css-validator/check/referer >
+Css validated by [jigsaw](https://jigsaw.w3.org/css-validator/).
  
 ## Overview
  
@@ -16,16 +15,18 @@ I designed this website with two aims in mind:
 
 
 ## Wireframe 
+I designed the wireframe for Inkspirational using balsamiq. 
 
-<https://balsamiq.cloud/s66rq4k/px2ud9x>
+View my large screen wireframe [here](https://balsamiq.cloud/s66rq4k/px2ud9x).
 
-Click the link to view my wireframe for The Tattoo project on balsamiq.
+View my mobile view wireframe [here](https://balsamiq.cloud/s66rq4k/pi0ekbn).
+
  
 ## UX
 
-####Megan: I am a 37yr old independent Tattoo artist. By signing up to The Tattoo Project website I was able to create my own profile page with details about my designs, my experience and how to contact me. I can also upload photos of my artwork for potential consumers to view. Not only that, The Tattoo Project is the perfect platform to sell copies of my prints. 
+####Megan: I am a 37yr old independent Tattoo artist. By signing up to the Inkspirational website I was able to create my own profile page with details about my designs, my experience and how to contact me. I can also upload photos of my artwork for potential consumers to view. Not only that, Inkspirational is the perfect platform to sell copies of my prints. 
 
-####John: I am a 41yr old carpenter and tattoo fanatic. I'm always on the lookout for new artists and tattoo ideas. By signing up to The Tattoo Project, I am able to browse the profiles of independent Tattooists and buy their prints. I can also browse the tattoos uploaded by likeminded ink fans and have uploaded pictures of some of my own. 
+####John: I am a 41yr old carpenter and tattoo fanatic. I'm always on the lookout for new artists and tattoo ideas. By signing up to Inkspirational, I am able to browse the profiles of independent Tattooists and buy their prints. I can also browse the tattoos uploaded by likeminded ink fans and have uploaded pictures of some of my own. 
 
 
 
@@ -91,7 +92,7 @@ I used the python web framework Django to create an object relational database.
     
 
 [Balsamiq](https://balsamiq.com/)
-- I used Balsamiq cloud to create my mockup.
+- I used Balsamiq cloud to create my wireframe.
 
 [Stripe](https://stripe.com/ie)
 - I used stripe to enable payment processing. 
@@ -112,6 +113,8 @@ I used the python web framework Django to create an object relational database.
 
 ## Testing
 
+- I implemented automatic testing of python functions, including forms, models and views, using [Unittest](https://docs.python.org/3/library/unittest.html). 
+
 - Manual testing was carried out as follows: 
   
 
@@ -119,52 +122,54 @@ I used the python web framework Django to create an object relational database.
 
 * Mobile view:  
   On smaller screens, the navbar collapses to a dropdown menu.   
-  The 'Let's go! button navigates to the 'Now' page with a list of current medications.   
-  The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page.   
+   
 
 * Larger screens:  
   The navbar is clear and functioning.   
-  The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are functioning and open the appropriate pages.   
-  The 'Let's go! button navigates to the 'Now' page with a list of current medications.   
+  All links are functioning and open the appropriate pages.   
+  The 'Signup' button initiates a modal to popup giving the user an option of artist or addict. 
+  Each of these links take the user to the relevant sign up page. 
 
-### Now page:
 
-* Mobile view:  
-  By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+### Signup:
 
-* Larger screens:  
-  By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+* If a user name that already exists is entered, the user will be informed. 
+* If no profile image is uploaded, a default avatar image is assigned.
+* If passwords do not match or do not meet criteria, the user is informed. 
+* On submitting profile form, the site navigates back to the homepage and the user can now view their profile page. 
 
-### Your Weekly schedule:
+### Profile page:
 
-* Mobile view/larger screens:   
-  By clicking on the "your weekly schedule" link in the navbar this page opens.   
-  An accordian of the days of the days of the week opens to display medication list for each day of the week.   
-  By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.  
-  By clicking on the floating edit button on the bottom roght corner of the page, the 'edit medications' form will render.   
+* On clicking the profile page link in the navbar, the users profile page is rendered, when logged in. 
+
+### Share you Art:
+
+* On clicking the 'share your art' link in the navbar, a form is rendered which allows the user to upload images of their tattoos. 
+* All form details must be filled in order to submit the form. 
+* On submission, the user is brought to a page displaying their new post. 
+* The back arrow navigates to the tattoo gallery. 
 
  
 
-### Add medication:
+### Tattoo Gallery: 
 
-* Mobile View/larger screens:  
-  By clicking on the "Add medication" link in the navbar this form opens.   
-  By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued.   
-  By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear.   
-  I can enter the name, generic name, doseage and physician name.   
-  By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
+* On clicking the 'Tattoos' link in the navbar, the user is brought to the Tattoo Gallery where all uploaded tattoos are displayed. 
+* The user can click on any of the images for further details or to like or comment. 
+* The back arrow navigates back to the home page.
+* 
 
-### Edit Medication: 
+### Prints:
 
-* Mobile View/larger screens:  
-  By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form.   
-  By clicking on each medication name, the accordian opens to display the details of that medication.   
-  By clicking on the delete button i can delete the medication from the list.  
-  By clicking on the edit icon, the edit form renders.  
-  By clicking on the calendar icon, a popup calendar appears to change the dates prescribed and discontinued.   
-  By clicking on each of the 'time of day' and 'weekday' boxes, a tick will appear.   
-  I can edit the name, generic name, doseage and physician name.   
-  By clicking on the 'save' button, I am brought to the 'edit medication list' page and the medication has been edited and saved.   
+* On clicking the Prints link in the navbar, 'product_list.html' is rendered which displays a gallery of uploaded prints. Artists may click on the 'click' link to upload their prints for sale. 
+* Addicts may click on each print title to render the 'product_detail' page and find out further info about the print. They may also add a review. 
+* Add to cart - logged in users may click on the 'add to cart' button, the item is added to the users cart. 
+* The back arrow renders the home page. 
+
+### Cart: 
+
+* By clicking on the 'cart' icon, the user is brought to cart view, where a list of their items in cart are displayed ion a table. 
+* Remove - clicking the remove button will remove the item from the cart. 
+* Checkout - this button will render the payment detail form. 
 
 
 
@@ -187,7 +192,7 @@ I followed a [Bootstrtap](https://getbootstrap.com/docs/4.0/components/card/) tu
 
 ## Deployment
 
-<https://keves-tattoo-project.herokuapp.com/>
+View Inkspirational on heroku [here](https://keves-tattoo-project.herokuapp.com/).
 
 1. I deployed My django project using the Heroku cloud app platform as follows: 
 
@@ -203,15 +208,6 @@ I followed a [Bootstrtap](https://getbootstrap.com/docs/4.0/components/card/) tu
 
 * I used os.getenv(PORT, 8080) as the port and os.getenv(IP, 0.0.0.0) as the host in my scripts. 
 
- 
-### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
-2. After you've that you'll need to make sure that you have **npm** installed
-  1. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
-4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this also may require sudo on Mac/Linux```
-5. Once **http-server** is installed run ```http-server -c-1```
-6. The project will now run on [localhost](http://127.0.0.1:8080)
-7. Make changes to the code and if you think it belongs in here then just submit a pull request
 
 ## Credits
 

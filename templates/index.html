@@ -77,7 +77,7 @@
         <div class = 'article'>
              <div class = 'row'>
                  <div class = 'col-sm-12'>
-                     <h1 id = 'article_heading'>ABOUT INKSPIRATIONAL</h1>
+                     <h1 id = 'article_heading'>ABOUT INKSPIRATION</h1>
                  </div>
              </div>
              <div class = 'row'>
@@ -140,19 +140,19 @@
 <div class = 'row'>
     <div class = 'txt-overlay col-sm-6 col-md-3'>
         <img class = 'block-image' src="static/images/body_tat_artist.jpeg" alt = 'face tattoo'></img>
-         <div class="centered"><li><a href="{% url 'add_post' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Upload your Ink</h2></button></a></li></div>
+         <div class="centered"><a href="{% url 'add_post' %}"type="button" class="btn btn-info btn-sm"><h2>Upload your Ink</h2></a></div>
     </div>
     <div class = 'txt-overlay col-sm-6 col-md-3'>
         <img class = 'block-image'src="static/images/print.jpeg" alt = 'print of lady'></img>
-         <div class="centered"> <li><a href="{% url 'product_list' %}"> <button type="button" class="btn btn-outline-dark btn-sm"><h2>Prints</h2></button></a></li></div>
+         <div class="centered"> <a href="{% url 'product_list' %}" class="btn btn-info btn-sm" role="button"> <h2>Prints</h2></a></div>
     </div>
     <div class = 'txt-overlay col-sm-6 col-md-3'>
         <img class = 'block-image'src="static/images/hand-tattoo.jpg" alt = 'hand tattoo'></img>
-         <div class="centered"><li><a href="{% url 'view_test' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Inkspiration</h2></button></a></li></div>
+         <div class="centered"><a href="{% url 'view_test' %}" type="button" class="btn btn-info btn-sm"><h2>Inkspiration</h2></a></div>
    </div>
     <div class = 'txt-overlay col-sm-6 col-md-3'>
         <img class = 'block-image'src="static/images/tattoo-gun.jpeg" alt = 'tattoo-gun'></img>
-         <div class="centered"><li><a href="{% url 'trial_artists' %}"><button type="button" class="btn btn-outline-dark btn-sm"><h2>Tattooists</h2></button></a></li></div>
+         <div class="centered"><a href="{% url 'trial_artists' %}"type="button" class="btn btn-info btn-sm"><h2>Tattooists</h2></a></div>
     </div>
 </div>
 </div>
@@ -172,12 +172,12 @@
 <div  class = 'row'>
 <div class = 'col-sm-6 '>
            
-<h3> <a class = 'signup' href="{% url 'register_artist' %}"> Artists  <i class="fas fa-user-plus"></i></a></h3>
+ <a class = 'signup btn' href="{% url 'register_artist' %}" type = 'button'><h2> Artists  <i class="fas fa-user-plus"></h2></i></a>
 <h4><p>Upload your details, reach international clients and sell your artwork</p></h4>
 </div> 
           <div class = 'col-sm-6'>
            
-               <h3><a class = 'signup' href="{% url 'register_lover' %}">Addicts  <i class="fas fa-user-plus"></i></a></h3>
+            <a class = 'signup btn' href="{% url 'register_lover' %}"><h2>Addicts  <i class="fas fa-user-plus"></h2></i></a>
              <h4>  <p>Browse local and international tattooists </p></h4>
        </div>
        </div>
@@ -198,14 +198,14 @@
  <div class = 'container'>
           
     <div  class = 'row'>
-        <div id = 'video' class = 'col-xs-12 col-md-8'>
+        <div id = 'video' class = 'col-sm-0 col-md-8'>
             
 
     
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/mthCj-WDLuw?start=28&autoplay=1&rel=0&showinfo=0&mute=1&loop=1&playlist=mthCj-WDLuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
-        <div   class = 'col-sm-0 col-md-4 '>
+        <div   class = 'col-sm-12 col-md-4 '>
             <img id = 'dragon' src="static/images/dragon.png"></img>
         </div>
     </div>

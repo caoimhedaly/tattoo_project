@@ -9,6 +9,14 @@ h1{
 
 }
 
+
+#title{
+     letter-spacing: 3px;
+   font-family: 'Monoton', cursive;
+
+    
+}
+
 html, body {
     
    font-family: 'Julius Sans One', sans-serif;
@@ -116,9 +124,14 @@ h3, h1, h1 a, i {
 
 
 
-a, a:hover {
+a {
     color: #223344;
+    
     text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 .icon-bar {
@@ -216,6 +229,7 @@ a, a:hover {
 .signup, .col-sm-6{
     text-align: center;
     color:white;
+    
     
 }
 
@@ -367,7 +381,7 @@ input{
 #product_name{
     color:black;
     padding-top: 0px;
-    padding-bottom: 20px;
+ 
     margin-top: 10px;
     
 }
@@ -452,8 +466,13 @@ p{
 #footer{
     padding-top: 15px;
     text-align: center;
-    width:100%;
+   
     background-color:  #78244C;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  
 }
 
 .article, article{

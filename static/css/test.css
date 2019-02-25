@@ -9,7 +9,11 @@
 }
 
 
-h1{color:#fff;margin-bottom:40px;text-align:center;font-weight:100; font-family: 'Monoton', cursive;}
+h2, h1{color:#fff;margin-bottom:40px;text-align:center;font-weight:100; font-family: 'Julius Sans One', sans-serif;}
+
+h2{
+  font-family: 'Julius Sans One', sans-serif;
+}
 
 .demo-gallery > post {
   margin-bottom: 0;

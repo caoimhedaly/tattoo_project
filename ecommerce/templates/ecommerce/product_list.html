@@ -58,13 +58,15 @@
 
             <div class='col-sm-12 col-md-12'>
                 {% if request.user.artist %}
-
-                <h1><a href="{% url 'add_product' %}"> Sell your Prints </a></h1>
                 
-                <hr>
+                
+
+              <h1>Sell your prints</h1>
+                
+                <a href = "{% url 'add_product' %}"  class="btn " role="button" id = 'title'>  <h3>Click <i class="fas fa-hand-pointer"></i></h3></a> 
 
 
-
+<hr>
 
 
 
@@ -86,7 +88,7 @@
                         <h4><a id='product_name' href="{% url 'product_detail' product.id %}">{{product.name}}</a>
 
                         </h4>
-                        <p>{{product.brand}}</p>
+                        
                         
                         {% if user.is_authenticated %}
 
@@ -95,7 +97,7 @@
                             <input type="hidden" name="product" value='{{product.id}}' />
                             <!--not visible on screen-->
                             <input id = 'number' type="number" name="quantity" value="1" />
-                            <input id = 'print-button' class="btn btn-primary" type="submit" value="Add to cart" />
+                            <input id = 'print-button' class="btn btn-primary btn-sm" type="submit" value="Add to cart" />
                         </form>
                         {% endif %}
 
